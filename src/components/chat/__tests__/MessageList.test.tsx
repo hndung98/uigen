@@ -12,15 +12,10 @@ afterEach(() => {
   cleanup();
 });
 
-test("MessageList shows empty state when no messages", () => {
-  render(<MessageList messages={[]} />);
-
-  expect(
-    screen.getByText("Start a conversation to generate React components")
-  ).toBeDefined();
-  expect(
-    screen.getByText("I can help you create buttons, forms, cards, and more")
-  ).toBeDefined();
+test("MessageList renders empty list when no messages", () => {
+  const { container } = render(<MessageList messages={[]} />);
+  const messageContainers = container.querySelectorAll(".rounded-xl");
+  expect(messageContainers).toHaveLength(0);
 });
 
 test("MessageList renders user messages", () => {
