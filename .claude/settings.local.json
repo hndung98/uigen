@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "mcp__playwright",
+      "Bash(start:*)",
+      "Bash(npx playwright --version)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(npx playwright install:*)",
+      "Bash(npx --yes playwright:*)",
+      "Bash(npx playwright:*)",
+      "Bash(ls:*)"
     ]
   }
 }
